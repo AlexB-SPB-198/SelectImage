@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         list.add(Model(R.drawable.ic_fish, true))
         list.add(Model(R.drawable.ic_fox, true))
         list.add(Model(R.drawable.ic_horses, true))
-        list.add(Model(R.drawable.ic_ireland, true))
+       list.add(Model(R.drawable.ic_ireland, true))
         list.add(Model(R.drawable.ic_kingfisher, true))
         list.add(Model(R.drawable.ic_owl, true))
         list.add(Model(R.drawable.ic_parrots, true))

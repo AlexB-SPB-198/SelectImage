@@ -4,8 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
-import com.bumptech.glide.Glide
 import com.example.selectimage.databinding.ItemBinding
 
 class ImageAdapter(
@@ -16,15 +14,16 @@ class ImageAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(image: Model) {
             binding.imageItem.setImageResource(image.image)
-            itemView.setOnClickListener {
+            itemView.setOnClickListener{
+                clickListener(image)
                 if (image.select){
                     binding.imageSelect.visibility = View.VISIBLE
                 }else{
                     binding.imageSelect.visibility = View.INVISIBLE
                 }
-                clickListener(image)
-
             }
+            clickListener(image)
+
 
         }
 
@@ -41,6 +40,7 @@ class ImageAdapter(
         holder.onBind(list[position])
     }
     override fun getItemCount()=list.size
+
 
 
 }

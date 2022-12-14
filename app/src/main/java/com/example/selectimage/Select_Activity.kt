@@ -12,7 +12,6 @@ class SelectActivity : BaseActivity<ActivitySelectBinding>() {
         return ActivitySelectBinding.inflate(layoutInflater)
     }
 
-
     override fun initView() {
         images = intent.getSerializableExtra("key") as ArrayList<Model>
         adapter = ImageAdapter(images, this::clickListener)
@@ -20,7 +19,6 @@ class SelectActivity : BaseActivity<ActivitySelectBinding>() {
     }
 
     private fun clickListener(imgModel: Model) {
-
     }
 
     override fun imageSend() {
